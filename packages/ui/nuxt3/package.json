@@ -1,6 +1,6 @@
 {
   "name": "@anggiedimasta/ui-nuxt3",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
-    "@tailwindcss/postcss": "^8.4.0",
+    "@tailwindcss/postcss": "^4.1.8",
+    "postcss": "^8.5.4",
     "tailwindcss": "^3.0.0"
   },
   "devDependencies": {
