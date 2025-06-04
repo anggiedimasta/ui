@@ -1,6 +1,6 @@
 {
   "name": "@anggiedimasta/ui-nuxt3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/module.ts",
   "types": "dist/module.d.ts",
   "type": "module",
