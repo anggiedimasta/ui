@@ -25,7 +25,7 @@ export default [
       ...vue.configs['flat/recommended'].rules,
       ...nuxt.configs.recommended.rules,
       'vue/comment-directive': 'off',
-      'vue/multi-word-component-names': 'warn',
+      'vue/multi-word-component-names': 'off',
       'vue/no-v-html': 'error',
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       'vue/component-options-name-casing': ['error', 'PascalCase'],

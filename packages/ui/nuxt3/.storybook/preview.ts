@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/vue3-vite';
-import '@anggiedimasta/config/styles/globals.css';
+import '@anggiedimasta/config/main.css';
 
 const preview: Preview = {
   parameters: {
