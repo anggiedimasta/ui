@@ -1,0 +1,14 @@
+{
+  "name": "@anggiedimasta/config",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29"
+  }
+}

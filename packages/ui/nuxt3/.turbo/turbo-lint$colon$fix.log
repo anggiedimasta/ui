@@ -1,0 +1,91 @@
+
+> @anggiedimasta/ui-nuxt3@0.0.1 lint:fix C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3
+> eslint . --ext .js,.ts,.vue --fix
+
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\.storybook\main.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/.storybook\main.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\.storybook\preview.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/.storybook\preview.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\.storybook\vitest.setup.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/.storybook\vitest.setup.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\src\components\button\AButton.vue
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/src\components\button\AButton.vue` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\src\components\toast\AToast.vue
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/src\components\toast\AToast.vue` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\src\components\toast\AToastProvider.vue
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/src\components\toast\AToastProvider.vue` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\src\composables\useToast.ts
+  40:7  error  'setTimeout' is not defined  no-undef
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\tailwind.config.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/tailwind.config.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\vite.config.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/vite.config.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\vitest.config.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/vitest.config.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\vitest.shims.d.ts
+  0:0  error  Parsing error: ESLint was configured to run on `<tsconfigRootDir>/vitest.shims.d.ts` using `parserOptions.project`: <tsconfigRootDir>/tsconfig.json
+However, that TSConfig does not include this file. Either:
+- Change ESLint's list of included files to not include this file
+- Change that TSConfig to include this file
+- Create a new TSConfig that includes this file and include it in your parserOptions.project
+See the typescript-eslint docs for more info: https://typescript-eslint.io/troubleshooting/typed-linting#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file
+
+✖ 11 problems (11 errors, 0 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.

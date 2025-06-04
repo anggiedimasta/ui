@@ -1,0 +1,293 @@
+🔎 checking possible migrations..
+
+🔎 found a 'remove-essentials' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────────────╮
+│                                                                                       │
+│           In Storybook 9.0, several features have been moved into Storybook's core.   │
+│                                                                                       │
+│   We've detected the following addons that are now part of Storybook core:            │
+│                                                                                       │
+│           - @storybook/addon-actions                                                  │
+│           - @storybook/addon-controls                                                 │
+│                                                                                       │
+│           These will be removed as they are no longer needed.                         │
+│                                                                                       │
+│           We'll also need to update your code to use the new core addons.             │
+│                                                                                       │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'remove-essentials' migration on your project? » (Y/n)√ Do you want to run the 'remove-essentials' migration on your project? ... yes
+❌ error when running remove-essentials migration
+Error: Command failed with exit code 7: pnpm exec storybook remove @storybook/addon-actions --config-dir .storybook
+Failed to remove '@storybook/addon-actions' from main.js addons field.
+An error occurred while removing dependencies.
+C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\bin\index.cjs:23
+  throw error;
+  ^
+
+HandledError: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions
+    at ps.removeDependencies (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:26153:94)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async removeAddon (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:27439:32)
+    at async C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:480:5562
+    at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\core-server\index.cjs:36122:12) {
+  handled: true,
+  cause: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions
+      at makeError (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:25217:67)
+      at handlePromise (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:25835:15)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async ps.executeCommand (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:26293:15)
+      at async ps.runRemoveDeps (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:26871:5)
+      at async ps.removeDependencies (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:26151:9)
+      at async removeAddon (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:27439:32)
+      at async C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:480:5562
+      at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\core-server\index.cjs:36122:12) {
+    shortMessage: 'Command failed with exit code 1: pnpm remove @storybook/addon-actions',
+    command: 'pnpm remove @storybook/addon-actions',
+    escapedCommand: 'pnpm remove "@storybook/addon-actions"',
+    exitCode: 1,
+    signal: undefined,
+    signalDescription: undefined,
+    stdout: undefined,
+    stderr: undefined,
+    cwd: 'C:\\Users\\anggiedimasta\\Documents\\DEVELOPMENTS\\PERSONAL\\@anggiedimasta\\packages\\ui\\nuxt3',
+    failed: true,
+    timedOut: false,
+    isCanceled: false,
+    killed: false
+  }
+}
+
+Node.js v22.14.0
+Uninstalling @storybook/addon-actions
+../../..                                 | Progress: resolved 0, reused 1, downloaded 0, added 0
+ WARN  deprecated @storybook/testing-library@0.2.2: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
+../../..                                 |   -1 -
+../../..                                 | Progress: resolved 410, reused 365, downloaded 0, added 0
+../../..                                 |   +1 +
+../../..                                 | Progress: resolved 410, reused 365, downloaded 0, added 0, done
+
+devDependencies:
+- @storybook/addon-actions 9.0.4
+
+Done in 2s
+Removing '@storybook/addon-actions' from main.js addons field.
+Uninstalling @storybook/addon-actions
+ ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS  Cannot remove '@storybook/addon-actions': no such dependency found
+
+Available dependencies: @anggiedimasta/config, @nuxt/kit, @nuxt/schema, @storybook/addon-a11y, @storybook/addon-controls, @storybook/addon-docs, @storybook/addon-essentials, @storybook/addon-interactions, @storybook/addon-links, @storybook/addon-onboarding, @storybook/addon-vitest, @storybook/builder-vite, @storybook/manager-api, @storybook/preview-api, @storybook/testing-library, @storybook/vue3, @storybook/vue3-vite, @vitejs/plugin-vue, @vitest/browser, @vitest/coverage-v8, playwright, storybook, typescript, vite, vitest, vue
+Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions
+Error: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions
+    at ps.removeDependencies (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:26153:94)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async removeAddon (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:27439:32)
+    at async C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:480:5562
+    at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\core-server\index.cjs:36122:12)
+    at makeError (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:25217:67)
+    at handlePromise (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:25835:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ps.executeCommand (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\common\index.cjs:26293:15)
+    at async Object.run (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:342:476)
+    at async runFixes (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:413:1798)
+    at async automigrate (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:411:1834)
+    at async doUpgrade (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:480:2517)
+    at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\storybook\dist\core-server\index.cjs:36122:12)
+    at async upgrade (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\cli\dist\bin\index.cjs:480:3048) {
+  shortMessage: 'Command failed with exit code 7: pnpm exec storybook remove @storybook/addon-actions --config-dir .storybook',
+  command: 'pnpm exec storybook remove @storybook/addon-actions --config-dir .storybook',
+  escapedCommand: 'pnpm exec storybook remove "@storybook/addon-actions" --config-dir .storybook',
+  exitCode: 7,
+  signal: undefined,
+  signalDescription: undefined,
+  stdout: 'Uninstalling @storybook/addon-actions\n' +
+    '../../..                                 | Progress: resolved 0, reused 1, downloaded 0, added 0\n' +
+    " WARN  deprecated @storybook/testing-library@0.2.2: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.\n" +
+    '../../..                                 |   -1 -\n' +
+    '../../..                                 | Progress: resolved 410, reused 365, downloaded 0, added 0\n' +
+    '../../..                                 |   +1 +\n' +
+    '../../..                                 | Progress: resolved 410, reused 365, downloaded 0, added 0, done\n' +
+    '\n' +
+    'devDependencies:\n' +
+    '- @storybook/addon-actions 9.0.4\n' +
+    '\n' +
+    'Done in 2s\n' +
+    "Removing '@storybook/addon-actions' from main.js addons field.\n" +
+    'Uninstalling @storybook/addon-actions\n' +
+    " ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS  Cannot remove '@storybook/addon-actions': no such dependency found\n" +
+    '\n' +
+    'Available dependencies: @anggiedimasta/config, @nuxt/kit, @nuxt/schema, @storybook/addon-a11y, @storybook/addon-controls, @storybook/addon-docs, @storybook/addon-essentials, @storybook/addon-interactions, @storybook/addon-links, @storybook/addon-onboarding, @storybook/addon-vitest, @storybook/builder-vite, @storybook/manager-api, @storybook/preview-api, @storybook/testing-library, @storybook/vue3, @storybook/vue3-vite, @vitejs/plugin-vue, @vitest/browser, @vitest/coverage-v8, playwright, storybook, typescript, vite, vitest, vue\n' +
+    'Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions\n' +
+    '\x1B[38;2;241;97;97mError: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions\x1B[39m\n' +
+    '    at ps.removeDependencies (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:26153:94)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async removeAddon (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:27439:32)\n' +
+    '    at async C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\@storybook\\cli\\dist\\bin\\index.cjs:480:5562\n' +
+    '    at async withTelemetry (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\core-server\\index.cjs:36122:12)',
+  stderr: "Failed to remove '@storybook/addon-actions' from main.js addons field.\n" +
+    'An error occurred while removing dependencies.\n' +
+    'C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\@storybook\\cli\\bin\\index.cjs:23\r\n' +
+    '  throw error;\r\n' +
+    '  ^\r\n' +
+    '\r\n' +
+    'HandledError: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions\r\n' +
+    '    at ps.removeDependencies (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:26153:94)\r\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\r\n' +
+    '    at async removeAddon (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:27439:32)\r\n' +
+    '    at async C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\@storybook\\cli\\dist\\bin\\index.cjs:480:5562\r\n' +
+    '    at async withTelemetry (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\core-server\\index.cjs:36122:12) {\r\n' +
+    '  handled: true,\r\n' +
+    '  cause: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions\r\n' +
+    '      at makeError (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:25217:67)\r\n' +
+    '      at handlePromise (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:25835:15)\r\n' +
+    '      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\r\n' +
+    '      at async ps.executeCommand (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:26293:15)\r\n' +
+    '      at async ps.runRemoveDeps (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:26871:5)\r\n' +
+    '      at async ps.removeDependencies (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:26151:9)\r\n' +
+    '      at async removeAddon (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\common\\index.cjs:27439:32)\r\n' +
+    '      at async C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\@storybook\\cli\\dist\\bin\\index.cjs:480:5562\r\n' +
+    '      at async withTelemetry (C:\\Users\\anggiedimasta\\AppData\\Local\\npm-cache\\_npx\\22a2e474f1fcccdb\\node_modules\\storybook\\dist\\core-server\\index.cjs:36122:12) {\r\n' +
+    "    shortMessage: 'Command failed with exit code 1: pnpm remove @storybook/addon-actions',\r\n" +
+    "    command: 'pnpm remove @storybook/addon-actions',\r\n" +
+    `    escapedCommand: 'pnpm remove "@storybook/addon-actions"',\r\n` +
+    '    exitCode: 1,\r\n' +
+    '    signal: undefined,\r\n' +
+    '    signalDescription: undefined,\r\n' +
+    '    stdout: undefined,\r\n' +
+    '    stderr: undefined,\r\n' +
+    "    cwd: 'C:\\\\Users\\\\anggiedimasta\\\\Documents\\\\DEVELOPMENTS\\\\PERSONAL\\\\@anggiedimasta\\\\packages\\\\ui\\\\nuxt3',\r\n" +
+    '    failed: true,\r\n' +
+    '    timedOut: false,\r\n' +
+    '    isCanceled: false,\r\n' +
+    '    killed: false\r\n' +
+    '  }\r\n' +
+    '}\r\n' +
+    '\r\n' +
+    'Node.js v22.14.0',
+  cwd: 'C:\\Users\\anggiedimasta\\Documents\\DEVELOPMENTS\\PERSONAL\\@anggiedimasta\\packages\\ui\\nuxt3',
+  failed: true,
+  timedOut: false,
+  isCanceled: false,
+  killed: false
+}
+
+
+╭ Migration check ran with failures ─────────────────────────────────────────────────────────────────╮
+│                                                                                                    │
+│   Failed migrations:                                                                               │
+│                                                                                                    │
+│   remove-essentials:                                                                               │
+│   Command failed with exit code 7: pnpm exec storybook remove @storybook/addon-actions             │
+│   --config-dir .storybook                                                                          │
+│   Failed to remove '@storybook/addon-actions' from main.js addons field.                           │
+│   An error occurred while removing dependencies.                                                   │
+│   C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@storybook\c   │
+│   li\bin\index.cjs:23                                                                              │
+│   throw error;                                                                                     │
+│   ^                                                                                                │
+│                                                                                                    │
+│   HandledError: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions       │
+│   at ps.removeDependencies (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb   │
+│   \node_modules\storybook\dist\common\index.cjs:26153:94)                                          │
+│   at process.processTicksAndRejections (node:internal/process/task_queues:105:5)                   │
+│   at async removeAddon (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\nod   │
+│   e_modules\storybook\dist\common\index.cjs:27439:32)                                              │
+│   at async C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@st   │
+│   orybook\cli\dist\bin\index.cjs:480:5562                                                          │
+│   at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\n   │
+│   ode_modules\storybook\dist\core-server\index.cjs:36122:12) {                                     │
+│   handled: true,                                                                                   │
+│   cause: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions              │
+│   at makeError (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_module   │
+│   s\storybook\dist\common\index.cjs:25217:67)                                                      │
+│   at handlePromise (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_mo   │
+│   dules\storybook\dist\common\index.cjs:25835:15)                                                  │
+│   at process.processTicksAndRejections (node:internal/process/task_queues:105:5)                   │
+│   at async ps.executeCommand (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fccc   │
+│   db\node_modules\storybook\dist\common\index.cjs:26293:15)                                        │
+│   at async ps.runRemoveDeps (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccd   │
+│   b\node_modules\storybook\dist\common\index.cjs:26871:5)                                          │
+│   at async ps.removeDependencies (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1   │
+│   fcccdb\node_modules\storybook\dist\common\index.cjs:26151:9)                                     │
+│   at async removeAddon (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\nod   │
+│   e_modules\storybook\dist\common\index.cjs:27439:32)                                              │
+│   at async C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@st   │
+│   orybook\cli\dist\bin\index.cjs:480:5562                                                          │
+│   at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\n   │
+│   ode_modules\storybook\dist\core-server\index.cjs:36122:12) {                                     │
+│   shortMessage: 'Command failed with exit code 1: pnpm remove @storybook/addon-actions',           │
+│   command: 'pnpm remove @storybook/addon-actions',                                                 │
+│   escapedCommand: 'pnpm remove "@storybook/addon-actions"',                                        │
+│   exitCode: 1,                                                                                     │
+│   signal: undefined,                                                                               │
+│   signalDescription: undefined,                                                                    │
+│   stdout: undefined,                                                                               │
+│   stderr: undefined,                                                                               │
+│   cwd: 'C:\\Users\\anggiedimasta\\Documents\\DEVELOPMENTS\\PERSONAL\\@anggiedimasta\\packages\\u   │
+│   i\\nuxt3',                                                                                       │
+│   failed: true,                                                                                    │
+│   timedOut: false,                                                                                 │
+│   isCanceled: false,                                                                               │
+│   killed: false                                                                                    │
+│   }                                                                                                │
+│   }                                                                                                │
+│                                                                                                    │
+│   Node.js v22.14.0                                                                                 │
+│   Uninstalling @storybook/addon-actions                                                            │
+│   ../../..                                 | Progress: resolved 0, reused 1, downloaded 0, added   │
+│   0                                                                                                │
+│   WARN  deprecated @storybook/testing-library@0.2.2: In Storybook 8, this package functionality    │
+│   has been integrated to a new package called @storybook/test, which uses Vitest APIs for an       │
+│   improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you      │
+│   will get prompted and will get an automigration for the new package. Please migrate when you     │
+│   can.                                                                                             │
+│   ../../..                                 |   -1 -                                                │
+│   ../../..                                 | Progress: resolved 410, reused 365, downloaded 0,     │
+│   added 0                                                                                          │
+│   ../../..                                 |   +1 +                                                │
+│   ../../..                                 | Progress: resolved 410, reused 365, downloaded 0,     │
+│   added 0, done                                                                                    │
+│                                                                                                    │
+│   devDependencies:                                                                                 │
+│   - @storybook/addon-actions 9.0.4                                                                 │
+│                                                                                                    │
+│   Done in 2s                                                                                       │
+│   Removing '@storybook/addon-actions' from main.js addons field.                                   │
+│   Uninstalling @storybook/addon-actions                                                            │
+│   ERR_PNPM_CANNOT_REMOVE_MISSING_DEPS  Cannot remove '@storybook/addon-actions': no such           │
+│   dependency found                                                                                 │
+│                                                                                                    │
+│   Available dependencies: @anggiedimasta/config, @nuxt/kit, @nuxt/schema, @storybook/addon-a11y,   │
+│   @storybook/addon-controls, @storybook/addon-docs, @storybook/addon-essentials,                   │
+│   @storybook/addon-interactions, @storybook/addon-links, @storybook/addon-onboarding,              │
+│   @storybook/addon-vitest, @storybook/builder-vite, @storybook/manager-api,                        │
+│   @storybook/preview-api, @storybook/testing-library, @storybook/vue3, @storybook/vue3-vite,       │
+│   @vitejs/plugin-vue, @vitest/browser, @vitest/coverage-v8, playwright, storybook, typescript,     │
+│   vite, vitest, vue                                                                                │
+│   Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions                     │
+│   Error: Error: Command failed with exit code 1: pnpm remove @storybook/addon-actions              │
+│   at ps.removeDependencies (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb   │
+│   \node_modules\storybook\dist\common\index.cjs:26153:94)                                          │
+│   at process.processTicksAndRejections (node:internal/process/task_queues:105:5)                   │
+│   at async removeAddon (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\nod   │
+│   e_modules\storybook\dist\common\index.cjs:27439:32)                                              │
+│   at async C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\node_modules\@st   │
+│   orybook\cli\dist\bin\index.cjs:480:5562                                                          │
+│   at async withTelemetry (C:\Users\anggiedimasta\AppData\Local\npm-cache\_npx\22a2e474f1fcccdb\n   │
+│   ode_modules\storybook\dist\core-server\index.cjs:36122:12)                                       │
+│                                                                                                    │
+│   You can find the full logs in C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedi   │
+│   masta\packages\ui\nuxt3\migration-storybook.log                                                  │
+│                                                                                                    │
+│   ─────────────────────────────────────────────────                                                │
+│                                                                                                    │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook               │
+│   automigrate'                                                                                     │
+│                                                                                                    │
+│   The automigrations try to migrate common patterns in your project, but might not contain         │
+│   everything needed to migrate to the latest version of Storybook.                                 │
+│                                                                                                    │
+│   Please check the changelog and migration guide for manual migrations and more information:       │
+│   https://storybook.js.org/docs/migration-guide                                                    │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                          │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+# Logs
+logs
+npm-debug.log*
+# Coverage directory used by tools like istanbul
+coverage

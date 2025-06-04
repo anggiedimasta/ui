@@ -1,0 +1,43 @@
+
+> @anggiedimasta/ui-nuxt3@0.0.1 lint C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3
+> eslint . --ext .js,.ts,.vue
+
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\.storybook\main.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): .storybook\main.ts
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\.storybook\preview.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): .storybook\preview.ts
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\.storybook\vitest.setup.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): .storybook\vitest.setup.ts
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\src\components\toast\AToastProvider.vue
+  13:69  warning  ':on-close' should be on a new line  vue/max-attributes-per-line
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\src\composables\useToast.ts
+  40:7  error  'setTimeout' is not defined  no-undef
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\tailwind.config.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): tailwind.config.ts
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\vite.config.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): vite.config.ts
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\vitest.config.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): vitest.config.ts
+
+C:\Users\anggiedimasta\Documents\DEVELOPMENTS\PERSONAL\@anggiedimasta\packages\ui\nuxt3\vitest.shims.d.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): vitest.shims.d.ts
+
+✖ 9 problems (8 errors, 1 warning)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
+ ELIFECYCLE  Command failed with exit code 1.

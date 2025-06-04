@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx,ts,tsx,vue}": ["biome format --write", "eslint --fix"],
+  "*.{json,yml,yaml,md}": ["biome format --write"]
+}
