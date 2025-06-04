@@ -5,3 +5,6 @@ logs
 npm-debug.log*
 # Coverage directory used by tools like istanbul
 coverage
+# Build output
+/dist/
+**/dist/
