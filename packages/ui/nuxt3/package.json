@@ -1,6 +1,6 @@
 {
   "name": "@anggiedimasta/ui-nuxt3",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,7 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./styles.css": "./dist/style.css"
+    "./ui-nuxt3.css": "./dist/ui-nuxt3.css"
   },
   "files": ["dist"],
   "scripts": {
