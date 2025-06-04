@@ -28,7 +28,7 @@
     "playwright-report",
     ".storybook/**/*.ts",
     "vite.config.js",
-    "vitest.config.ts",
+    "vitest.config.js",
     "vue-shims.d.ts"
   ]
 }
