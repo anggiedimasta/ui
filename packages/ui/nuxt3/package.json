@@ -1,6 +1,6 @@
 {
   "name": "@anggiedimasta/ui-nuxt3",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -13,9 +13,10 @@
     },
     "./styles.css": "./dist/style.css"
   },
-  "files": ["src", "dist"],
+  "files": ["dist"],
   "scripts": {
     "build": "vite build",
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./dist/style.css --minify",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint . --ext .js,.ts,.vue",
