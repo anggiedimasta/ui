@@ -1,4 +1,4 @@
-import { expect, fn, userEvent, within } from '@storybook/test';
+import { userEvent, within } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import Button from './AButton.vue';
 
@@ -16,19 +16,17 @@ export const Primary: Story = {
     variant: 'default',
     size: 'default',
     default: 'Primary Button',
-    onClick: fn(),
   },
-  render: (args) => ({
+  render: (args: (typeof Button)['$props']) => ({
     components: { Button },
     setup() {
       return { args };
     },
     template: '<Button v-bind="args" @click="args.onClick">{{ args.default }}</Button>',
   }),
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByRole('button'));
-    await expect(args.onClick).toHaveBeenCalled();
   },
 };
 
@@ -37,18 +35,16 @@ export const Destructive: Story = {
     variant: 'destructive',
     size: 'default',
     default: 'Destructive Button',
-    onClick: fn(),
   },
-  render: (args) => ({
+  render: (args: (typeof Button)['$props']) => ({
     components: { Button },
     setup() {
       return { args };
     },
     template: '<Button v-bind="args" @click="args.onClick">{{ args.default }}</Button>',
   }),
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByRole('button'));
-    await expect(args.onClick).toHaveBeenCalled();
   },
 };

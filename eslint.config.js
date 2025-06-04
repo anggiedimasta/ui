@@ -70,6 +70,7 @@ export default [
       'coverage',
       'dist',
       'node_modules',
+      '**/vue-shims.d.ts',
     ],
   },
 ];

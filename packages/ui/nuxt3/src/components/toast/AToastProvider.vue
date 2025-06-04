@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useToast } from '#ui/composables/useToast';
+import { useToast } from '../../composables/useToast';
 import Toast from './AToast.vue';
 
 const { toasts, remove } = useToast();
@@ -10,7 +10,12 @@ const { toasts, remove } = useToast();
     class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:right-0 sm:top-auto sm:bottom-0 sm:flex-col md:max-w-[420px]"
   >
     <TransitionGroup name="toast">
-      <Toast v-for="toast in toasts" :key="toast.id" :toast="toast" :on-close="remove" />
+      <Toast
+        v-for="toast in toasts"
+        :key="toast.id"
+        :toast="toast"
+        @close="remove(toast.id)"
+      />
     </TransitionGroup>
   </div>
 </template>

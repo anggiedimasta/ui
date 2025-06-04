@@ -1,4 +1,3 @@
-import { fileURLToPath } from 'node:url';
 import { addComponent, createResolver, defineNuxtModule } from '@nuxt/kit';
 
 export default defineNuxtModule({
@@ -8,11 +7,6 @@ export default defineNuxtModule({
   },
   setup(_options, nuxt) {
     const resolver = createResolver(import.meta.url);
-    const srcDir = fileURLToPath(new URL('./', import.meta.url));
-
-    // Add aliases
-    nuxt.options.alias['@ui'] = srcDir;
-    nuxt.options.alias['#ui'] = srcDir;
 
     // Register components at build time
     addComponent({

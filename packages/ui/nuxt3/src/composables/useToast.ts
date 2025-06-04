@@ -8,7 +8,7 @@ export interface Toast {
     label: string;
     onClick: () => void;
   };
-  variant?: 'destructive' | 'success' | 'info' | 'warning';
+  variant?: 'default' | 'destructive' | 'success' | 'info' | 'warning';
   duration?: number;
 }
 

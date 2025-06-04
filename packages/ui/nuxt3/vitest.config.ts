@@ -4,10 +4,9 @@ import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 import { storybookVuePlugin } from '@storybook/vue3-vite/vite-plugin';
 import { defineConfig, mergeConfig } from 'vitest/config';
 
-import viteConfig from './vite.config';
+import viteConfig from './vite.config.ts';
 
-const dirname =
-  typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default mergeConfig(
   viteConfig,

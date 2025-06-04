@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from 'nuxt/app';
-import { useToast } from '../composables/useToast';
+import { useToast } from '../composables/useToast.ts';
 
 export default defineNuxtPlugin(() => {
   const { add } = useToast();

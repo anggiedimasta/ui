@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
     "lib": ["ESNext", "DOM"],
     "strict": true,
     "declaration": true,
@@ -15,12 +17,18 @@
     "types": ["node", "vitest", "@types/node"],
     "jsx": "preserve"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "storybook-static",
+    ".nuxt",
+    ".output",
+    "playwright-report",
     ".storybook/**/*.ts",
-    "vite.config.ts",
-    "vitest.config.ts"
+    "vite.config.js",
+    "vitest.config.ts",
+    "vue-shims.d.ts"
   ]
 }
