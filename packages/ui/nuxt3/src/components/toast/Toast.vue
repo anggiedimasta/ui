@@ -1,21 +1,47 @@
 <script setup lang="ts">
+import { type VariantProps, cva } from 'class-variance-authority';
+import { computed } from 'vue';
 import type { Toast } from '../../composables/useToast';
+import { defaultVariant, destructiveVariant } from './variants';
 
-defineProps<{
-  toast: Toast;
-}>();
+const toastCva = cva(
+  'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all',
+  {
+    variants: {
+      variant: {
+        default: defaultVariant,
+        destructive: destructiveVariant,
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  },
+);
+
+type ToastCvaProps = VariantProps<typeof toastCva>;
+const props = withDefaults(
+  defineProps<{
+    toast: Omit<Toast, 'variant'> & { variant: ToastCvaProps['variant'] };
+  }>(),
+  {
+    toast: () => ({
+      action: null,
+      description: '',
+      duration: 5000,
+      id: 'toast',
+      title: '',
+      variant: 'default',
+    }),
+  },
+);
+
+const toastClass = computed(() => toastCva({ variant: props.toast.variant }));
 </script>
 
 <template>
   <div
-    :class="[
-      'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all',
-      {
-        'border-border bg-background text-foreground': toast.variant === 'default',
-        'destructive group border-destructive bg-destructive text-destructive-foreground':
-          toast.variant === 'destructive',
-      },
-    ]"
+    :class="toastClass"
   >
     <div class="flex flex-1 items-start gap-2">
       <div class="grid gap-1">

@@ -1,34 +1,10 @@
 {
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "node16",
-    "moduleResolution": "node16",
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
-    "lib": ["ESNext", "DOM"],
-    "strict": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "rootDir": ".",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "types": ["node", "vitest", "@types/node"],
-    "jsx": "preserve"
-  },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "coverage",
-    "storybook-static",
-    ".nuxt",
-    ".output",
-    "playwright-report",
-    ".storybook/**/*.ts",
-    "vite.config.js",
-    "vitest.config.js",
-    "vue-shims.d.ts"
-  ]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
 }

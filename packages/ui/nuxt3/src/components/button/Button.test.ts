@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/vue';
 import { describe, expect, it } from 'vitest';
-import Button from './AButton.vue';
+import Button from './Button.vue';
 
 describe('Button.vue', () => {
   it('renders slot content', () => {

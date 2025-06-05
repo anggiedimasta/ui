@@ -38,6 +38,7 @@ export default [
     rules: {
       ...nuxt.configs.recommended.rules,
       'vue/comment-directive': 'off',
+      'vue/multi-word-component-names': 'off',
       'vue/max-attributes-per-line': [
         'warn',
         {

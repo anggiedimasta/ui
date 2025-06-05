@@ -1,15 +1,15 @@
 import { ref } from 'vue';
 
 export interface Toast {
-  id: string;
-  title?: string;
-  description?: string;
   action?: {
     label: string;
     onClick: () => void;
   };
-  variant?: 'default' | 'destructive' | 'success' | 'info' | 'warning';
+  description?: string;
   duration?: number;
+  id: string;
+  title?: string;
+  variant?: 'default' | 'destructive' | 'success' | 'info' | 'warning';
 }
 
 const TOAST_LIMIT = 1;

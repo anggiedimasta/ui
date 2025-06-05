@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useToast } from '../../composables/useToast';
-import Toast from './AToast.vue';
+import Toast from './Toast.vue';
 
 const { toasts, remove } = useToast();
 </script>
