@@ -1,5 +1,0 @@
-{
-  "buildCommand": "npm build",
-  "installCommand": "npm install --frozen-lockfile",
-  "outputDirectory": ".output"
-}
