@@ -48,7 +48,7 @@ importers:
   apps/web:
     dependencies:
       '@anggiedimasta/ui':
-        specifier: ^2.1.1
+        specifier: ^4.0.0
         version: link:../../packages/ui
       '@nuxtjs/tailwindcss':
         specifier: 7.0.0-beta.0
