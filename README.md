@@ -4,13 +4,57 @@ A modern, accessible Vue 3 UI component library with comprehensive documentation
 
 ## 🚀 Quick Start
 
-```bash
-# Install the UI library
-npm install @anggiedimasta/ui
+### 1. Install the UI library
 
-# Import components
+```bash
+pnpm add @anggiedimasta/ui
+```
+
+### 2. Install Tailwind CSS (if not already installed)
+
+```bash
+pnpm add -D tailwindcss
+pnpm exec tailwindcss init
+```
+
+### 3. Import CSS
+
+Add the following to your main CSS file (e.g., `assets/css/main.css` or `style.css`):
+
+```css
+@import "tailwindcss";
+@import "@anggiedimasta/ui/styles.css";
+
+/* Optional: Add dark theme class to your root element */
+.dark {
+  /* Dark theme will be automatically applied */
+}
+```
+
+### 4. Import and use components
+
+```vue
+<script setup>
 import { Button } from '@anggiedimasta/ui'
-import '@anggiedimasta/ui/styles.css'
+</script>
+
+<template>
+  <Button variant="primary">Click me!</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="destructive">Delete</Button>
+</template>
+```
+
+## 🎨 Theme Support
+
+The library includes both light and dark themes. To enable dark mode, add the `dark` class to your root element:
+
+```vue
+<template>
+  <div class="dark">
+    <!-- Your app content -->
+  </div>
+</template>
 ```
 
 ## 📦 Packages

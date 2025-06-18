@@ -1,7 +1,7 @@
 {
   "name": "@anggiedimasta/ui",
   "description": "A modern, accessible Vue 3 UI component library with comprehensive documentation, testing, and design system built with Tailwind CSS",
-  "version": "2.1.1",
+  "version": "4.0.0",
   "type": "module",
   "author": "anggiedimasta",
   "license": "MIT",
@@ -56,7 +56,7 @@
     "build-storybook": "storybook build",
     "clear": "rimraf ./dist",
     "coverage": "vitest run --coverage",
-    "dev": "nuxi dev playground",
+    "dev": "pnpm run storybook",
     "dev:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
     "format": "biome format --write .",
     "lint": "biome check .",

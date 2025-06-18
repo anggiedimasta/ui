@@ -11,12 +11,8 @@
           Create beautiful, accessible, and performant web applications with ease.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <button class="px-8 py-3 text-lg font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-            Get Started
-          </button>
-          <button class="px-8 py-3 text-lg font-semibold bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors">
-            View Components
-          </button>
+          <Button variant="default" size="lg">Get Started</Button>
+          <Button variant="secondary" size="lg">View Components</Button>
         </div>
       </div>
     </section>
@@ -76,7 +72,13 @@
         <div class="bg-muted/50 rounded-xl p-8">
           <h3 class="text-lg font-semibold text-foreground mb-4">Installation</h3>
           <div class="code-block mb-6">
-            <code>npm install @anggiedimasta/ui</code>
+            <code>pnpm add tailwindcss@^4 @anggiedimasta/ui</code>
+          </div>
+
+          <h3 class="text-lg font-semibold text-foreground mb-4">Import CSS</h3>
+          <div class="code-block mb-6">
+            <pre><code>@import "tailwindcss";
+@import "@anggiedimasta/ui/styles.css";</code></pre>
           </div>
 
           <h3 class="text-lg font-semibold text-foreground mb-4">Usage</h3>
@@ -103,9 +105,7 @@
             to="/components"
             class="inline-block"
           >
-            <button class="px-8 py-3 text-lg font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-              Explore Components
-            </button>
+            <Button variant="default" size="lg">Explore Components</Button>
           </NuxtLink>
           <a
             href="https://github.com/anggiedimasta/ui"
@@ -113,9 +113,7 @@
             rel="noopener noreferrer"
             class="inline-block"
           >
-            <button class="px-8 py-3 text-lg font-semibold bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors">
-              View on GitHub
-            </button>
+            <Button variant="secondary" size="lg">View on GitHub</Button>
           </a>
         </div>
       </div>
@@ -124,6 +122,8 @@
 </template>
 
 <script setup>
+import { Button } from '@anggiedimasta/ui'
+
 // Set page metadata
 useHead({
   title: '@anggiedimasta/ui - Vue 3 UI Component Library',

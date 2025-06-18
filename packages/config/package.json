@@ -1,7 +1,7 @@
 {
   "name": "@anggiedimasta/config",
   "description": "Shared configuration and styles for the @anggiedimasta/ui design system including Tailwind CSS setup",
-  "version": "2.1.0",
+  "version": "4.0.0",
   "author": "anggiedimasta",
   "license": "MIT",
   "access": "public",

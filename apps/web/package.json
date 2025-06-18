@@ -1,7 +1,7 @@
 {
   "name": "@anggiedimasta/ui-web",
   "description": "Demo web application showcasing the @anggiedimasta/ui component library with Nuxt 3",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "private": true,
   "author": "anggiedimasta",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@anggiedimasta/ui": "^2.1.1",
+    "@anggiedimasta/ui": "^4.0.0",
     "@nuxtjs/tailwindcss": "7.0.0-beta.0",
     "nuxt": "^3.12.0",
     "tailwindcss": "^4.1.8"

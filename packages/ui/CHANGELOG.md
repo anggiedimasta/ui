@@ -1,5 +1,16 @@
 # @anggiedimasta/ui
 
+## 3.0.0
+
+### Major Changes
+
+- sync
+
+### Patch Changes
+
+- Updated dependencies
+  - @anggiedimasta/config@3.0.0
+
 ## 2.1.1
 
 ### Patch Changes
