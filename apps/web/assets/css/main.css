@@ -1,0 +1,216 @@
+@import "tailwindcss";
+@import "@anggiedimasta/ui/styles.css";
+
+/* Custom cyberpunk styles for the web app layout only */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, hsl(220 13% 8%) 0%, hsl(220 13% 12%) 100%);
+    min-height: 100vh;
+  }
+
+  body {
+    background: transparent;
+  }
+
+  /* Custom scrollbar for cyberpunk feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(220 13% 15%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(180 100% 50%);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(180 100% 60%);
+  }
+}
+
+@layer components {
+  /* Cyberpunk card styles for layout content */
+  .cyber-card {
+    background-color: var(--card);
+    color: var(--card-foreground);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px hsl(220 13% 8% / 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .cyber-card:hover {
+    box-shadow: 0 8px 30px hsl(220 13% 8% / 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  /* Neon text effect for headings */
+  .neon-text {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+
+  /* Glowing border effect for layout elements */
+  .glow-border {
+    position: relative;
+  }
+
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, hsl(180 100% 50%), hsl(280 100% 50%), hsl(120 100% 50%));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .glow-border:hover::before {
+    opacity: 1;
+  }
+
+  /* Cyberpunk header styles */
+  .cyber-header {
+    background-color: color-mix(in oklab, var(--card) 80%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 20px hsl(220 13% 8% / 0.2);
+  }
+
+  /* Gradient backgrounds for layout sections */
+  .cyber-gradient {
+    background: linear-gradient(135deg,
+      hsl(220 13% 8%) 0%,
+      hsl(220 13% 12%) 50%,
+      hsl(220 13% 8%) 100%);
+  }
+
+  .neon-gradient {
+    background: linear-gradient(45deg,
+      hsl(180 100% 50% / 0.1) 0%,
+      hsl(280 100% 50% / 0.1) 50%,
+      hsl(120 100% 50% / 0.1) 100%);
+  }
+
+  /* Code block styling for documentation */
+  .code-block {
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+  }
+
+  .code-block code {
+    color: var(--accent);
+    font-size: 0.875rem;
+  }
+
+  /* Feature card styling */
+  .feature-card {
+    background-color: var(--card);
+    color: var(--card-foreground);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px hsl(220 13% 8% / 0.3);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 8px 30px hsl(220 13% 8% / 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, hsl(180 100% 50%), hsl(280 100% 50%), hsl(120 100% 50%));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-icon.primary {
+    background-color: color-mix(in oklab, var(--primary) 20%, transparent);
+  }
+
+  .feature-icon.secondary {
+    background-color: color-mix(in oklab, var(--secondary) 20%, transparent);
+  }
+
+  .feature-icon.accent {
+    background-color: color-mix(in oklab, var(--accent) 20%, transparent);
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes for cyberpunk effects */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  /* Layout-specific neon backgrounds */
+  .bg-neon-primary {
+    background: hsl(180 100% 50%);
+    box-shadow: 0 0 20px hsl(180 100% 50% / 0.5);
+  }
+
+  .bg-neon-secondary {
+    background: hsl(280 100% 50%);
+    box-shadow: 0 0 20px hsl(280 100% 50% / 0.5);
+  }
+
+  .bg-neon-accent {
+    background: hsl(120 100% 50%);
+    box-shadow: 0 0 20px hsl(120 100% 50% / 0.5);
+  }
+
+  .bg-neon-destructive {
+    background: hsl(0 100% 50%);
+    box-shadow: 0 0 20px hsl(0 100% 50% / 0.5);
+  }
+
+  /* Additional utility classes for missing theme colors */
+  .bg-card {
+    background-color: var(--card);
+  }
+
+  .text-card-foreground {
+    color: var(--card-foreground);
+  }
+
+  .bg-muted {
+    background-color: var(--muted);
+  }
+
+  .text-muted-foreground {
+    color: var(--muted-foreground);
+  }
+
+  .border-border {
+    border-color: var(--border);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
+  }
+}

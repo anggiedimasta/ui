@@ -1,84 +1,83 @@
-# Turborepo starter
+# @anggiedimasta/ui
 
-This Turborepo starter is maintained by the Turborepo core team.
+A modern, accessible Vue 3 UI component library with comprehensive documentation, testing, and design system built with Tailwind CSS.
 
-## Using this example
+## 🚀 Quick Start
 
-Run the following command:
+```bash
+# Install the UI library
+npm install @anggiedimasta/ui
 
-```sh
-npx create-turbo@latest
+# Import components
+import { Button } from '@anggiedimasta/ui'
+import '@anggiedimasta/ui/styles.css'
 ```
 
-## What's inside?
+## 📦 Packages
 
-This Turborepo includes the following packages/apps:
+- **@anggiedimasta/ui** - Main UI component library
+- **@anggiedimasta/config** - Shared configuration and styles
+- **@anggiedimasta/ui-web** - Demo web application
 
-### Apps and Packages
+## 🛠️ Development
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+```bash
+# Install dependencies
+pnpm install
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
+# Start development
 pnpm dev
+
+# Run tests
+pnpm test
+
+# Build packages
+pnpm build
+
+# Start Storybook
+pnpm storybook
 ```
 
-### Remote Caching
+## 📚 Documentation
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+- [Storybook](https://ui.anggiedimasta.com) - Interactive component documentation
+- [Demo App](https://ui.anggiedimasta.com) - Live demo application
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## 🚀 Deployment & Publishing
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+### Automatic Workflow
 
+This project uses GitHub Actions for automated deployment:
+
+1. **Git Push** → Triggers build and test
+2. **Git Tag** → Publishes packages to npm
+3. **Deploy** → Deploys web app to Vercel
+
+### Manual Publishing
+
+```bash
+# Publish config package
+cd packages/config
+pnpm publish
+
+# Publish UI package
+cd packages/ui
+pnpm publish
+
+# Deploy web app to Vercel
+cd apps/web
+vercel --prod
 ```
-cd my-turborepo
-npx turbo login
-```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Required Secrets
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Set these GitHub repository secrets:
 
-```
-npx turbo link
-```
+- `NPM_TOKEN` - NPM authentication token
+- `VERCEL_TOKEN` - Vercel authentication token
+- `VERCEL_ORG_ID` - Vercel organization ID
+- `VERCEL_PROJECT_ID` - Vercel project ID
 
-## Useful Links
+## 📄 License
 
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+MIT © [anggiedimasta](https://github.com/anggiedimasta)

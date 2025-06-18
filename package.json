@@ -1,20 +1,62 @@
 {
-  "name": "ui",
+  "name": "@anggiedimasta/ui",
+  "description": "A modern Vue 3 UI component library with comprehensive documentation, testing, and design system",
+  "version": "0.1.0",
   "private": true,
+  "author": "anggiedimasta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anggiedimasta/ui.git"
+  },
+  "homepage": "https://github.com/anggiedimasta/ui#readme",
+  "bugs": {
+    "url": "https://github.com/anggiedimasta/ui/issues"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "components",
+    "design-system",
+    "tailwindcss",
+    "typescript",
+    "storybook",
+    "monorepo"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "format": "turbo run format",
+    "test": "turbo run test",
+    "prepare": "husky install",
+    "publish:config": "cd packages/config && pnpm publish --no-git-checks --access public",
+    "publish:ui": "cd packages/ui && pnpm publish --no-git-checks --access public",
+    "publish:all": "pnpm build && pnpm publish:config && pnpm publish:ui",
+    "deploy:web": "cd apps/web && vercel --prod",
+    "release": "pnpm publish:all && pnpm deploy:web"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/node": "^20.11.19",
+    "biome": "^0.3.3",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "turbo": "^2.5.4",
-    "typescript": "5.8.2"
+    "typescript": "^5.3.3"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@8.15.4",
   "engines": {
-    "node": ">=18"
+    "node": ">=18.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

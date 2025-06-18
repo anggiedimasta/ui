@@ -1,27 +1,114 @@
 {
-  "name": "@repo/ui",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@anggiedimasta/ui",
+  "description": "A modern, accessible Vue 3 UI component library with comprehensive documentation, testing, and design system built with Tailwind CSS",
+  "version": "0.1.0",
+  "type": "module",
+  "author": "anggiedimasta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anggiedimasta/ui.git"
+  },
+  "homepage": "https://github.com/anggiedimasta/ui#readme",
+  "bugs": {
+    "url": "https://github.com/anggiedimasta/ui/issues"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "components",
+    "design-system",
+    "tailwindcss",
+    "typescript",
+    "storybook",
+    "accessible",
+    "modern"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "./*": "./src/*.tsx"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "build": "pnpm run clear && pnpm run build:production",
+    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "build:package": "vite build",
+    "build:production": "pnpm run build:package && pnpm run build:types && pnpm run build:css",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly && tsc-alias -p tsconfig.json",
+    "build-storybook": "storybook build",
+    "clear": "rimraf ./dist",
+    "coverage": "vitest run --coverage",
+    "dev": "nuxi dev playground",
+    "dev:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "prepublishOnly": "pnpm run build:production",
+    "storybook": "storybook dev -p 6006",
+    "test": "vitest",
+    "test:unit": "vitest run --config vitest.unit.config.ts",
+    "test:storybook": "vitest run --config vitest.config.ts",
+    "test:all": "pnpm test:unit && pnpm test:storybook",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "typecheck": "vue-tsc --noEmit"
   },
-  "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "^2.5.0",
-    "@types/node": "^22.15.3",
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "eslint": "^9.28.0",
-    "typescript": "5.8.2"
+  "peerDependencies": {
+    "tailwindcss": "^4",
+    "vue": "^3.4.0"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@anggiedimasta/config": "workspace:*",
+    "@tailwindcss/vite": "^4.1.4",
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "9.0.6",
+    "@storybook/addon-docs": "9.0.6",
+    "@storybook/addon-themes": "9.0.6",
+    "@storybook/addon-vitest": "9.0.6",
+    "@storybook/builder-vite": "9.0.6",
+    "@storybook/manager-api": "^9.0.0-alpha.1",
+    "@storybook/preview-api": "^9.0.0-alpha.1",
+    "@storybook/test": "9.0.0-alpha.2",
+    "@storybook/vue3": "9.0.6",
+    "@storybook/vue3-vite": "9.0.6",
+    "@tailwindcss/cli": "^4.1.5",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vue/test-utils": "^2.4.4",
+    "@vue/tsconfig": "0.7.0",
+    "clsx": "^2.1.1",
+    "esbuild-plugin-vue": "^0.2.4",
+    "jsdom": "^26.1.0",
+    "playwright": "^1.52.0",
+    "rimraf": "^6.0.1",
+    "storybook": "9.0.6",
+    "tsc-alias": "1.8.15",
+    "typescript": "^5.3.3",
+    "unplugin-vue": "^6.2.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.16",
+    "vue-tsc": "2.2.8"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=10.x"
   }
 }
