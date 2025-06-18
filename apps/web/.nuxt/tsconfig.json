@@ -110,10 +110,10 @@
         "../assets/css/main"
       ],
       "#tailwindcss/sources": [
-        "./tailwindcss/sources"
+        "./tailwindcss/sources.css"
       ],
       "#app-manifest": [
-        "./manifest/meta/e3ea8b05-695e-4d87-8ab8-932c2ec01198"
+        "./manifest/meta/5f6725bc-af42-4246-be1c-1c0c4ed5d016.json"
       ],
       "#components": [
         "./components"
@@ -159,8 +159,8 @@
     "./nuxt.d.ts",
     "../../../node_modules/.pnpm/@nuxtjs+tailwindcss@7.0.0-beta.0_vite@6.3.5/node_modules/@nuxtjs/tailwindcss/runtime",
     "../../../node_modules/.pnpm/@nuxtjs+tailwindcss@7.0.0-beta.0_vite@6.3.5/node_modules/@nuxtjs/tailwindcss/dist/runtime",
-    "../node_modules/@nuxt/devtools/runtime",
-    "../node_modules/@nuxt/devtools/dist/runtime",
+    "../../../node_modules/.pnpm/@nuxt+devtools@2.5.0_vite@6.3.5_vue@3.5.16/node_modules/@nuxt/devtools/runtime",
+    "../../../node_modules/.pnpm/@nuxt+devtools@2.5.0_vite@6.3.5_vue@3.5.16/node_modules/@nuxt/devtools/dist/runtime",
     "../../../node_modules/.pnpm/@nuxt+telemetry@2.6.6/node_modules/@nuxt/telemetry/runtime",
     "../../../node_modules/.pnpm/@nuxt+telemetry@2.6.6/node_modules/@nuxt/telemetry/dist/runtime",
     "..",
@@ -176,12 +176,12 @@
     "../../../node_modules",
     "../../../node_modules/.pnpm/nuxt@3.17.5_@types+node@20.19.0_typescript@5.8.3_vite@6.3.5/node_modules/nuxt/node_modules",
     "../../../node_modules/.pnpm/@nuxtjs+tailwindcss@7.0.0-beta.0_vite@6.3.5/node_modules/@nuxtjs/tailwindcss/node_modules",
-    "../node_modules/@nuxt/devtools/node_modules",
+    "../../../node_modules/.pnpm/@nuxt+devtools@2.5.0_vite@6.3.5_vue@3.5.16/node_modules/@nuxt/devtools/node_modules",
     "../../../node_modules/.pnpm/@nuxt+telemetry@2.6.6/node_modules/@nuxt/telemetry/node_modules",
     "../../../node_modules/.pnpm/@nuxtjs+tailwindcss@7.0.0-beta.0_vite@6.3.5/node_modules/@nuxtjs/tailwindcss/runtime/server",
     "../../../node_modules/.pnpm/@nuxtjs+tailwindcss@7.0.0-beta.0_vite@6.3.5/node_modules/@nuxtjs/tailwindcss/dist/runtime/server",
-    "../node_modules/@nuxt/devtools/runtime/server",
-    "../node_modules/@nuxt/devtools/dist/runtime/server",
+    "../../../node_modules/.pnpm/@nuxt+devtools@2.5.0_vite@6.3.5_vue@3.5.16/node_modules/@nuxt/devtools/runtime/server",
+    "../../../node_modules/.pnpm/@nuxt+devtools@2.5.0_vite@6.3.5_vue@3.5.16/node_modules/@nuxt/devtools/dist/runtime/server",
     "../../../node_modules/.pnpm/@nuxt+telemetry@2.6.6/node_modules/@nuxt/telemetry/runtime/server",
     "../../../node_modules/.pnpm/@nuxt+telemetry@2.6.6/node_modules/@nuxt/telemetry/dist/runtime/server",
     "../.output"

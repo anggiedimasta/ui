@@ -1,7 +1,7 @@
 {
   "name": "@anggiedimasta/ui",
   "description": "A modern, accessible Vue 3 UI component library with comprehensive documentation, testing, and design system built with Tailwind CSS",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
   "author": "anggiedimasta",
   "license": "MIT",
@@ -33,7 +33,8 @@
     "**/*.css"
   ],
   "files": [
-    "dist"
+    "dist",
+    "dist/styles.css"
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
