@@ -1,5 +1,11 @@
 # @anggiedimasta/config
 
+## 2.0.0
+
+### Major Changes
+
+- fix changesets
+
 ## 1.0.0
 
 ### Major Changes

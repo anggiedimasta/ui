@@ -1,5 +1,16 @@
 # @anggiedimasta/ui
 
+## 2.0.0
+
+### Major Changes
+
+- fix changesets
+
+### Patch Changes
+
+- Updated dependencies
+  - @anggiedimasta/config@2.0.0
+
 ## 1.0.0
 
 ### Major Changes
