@@ -1,5 +1,13 @@
 # @anggiedimasta/ui
 
+## 2.1.1
+
+### Patch Changes
+
+- config update
+- Updated dependencies
+  - @anggiedimasta/config@2.1.0
+
 ## 2.1.0
 
 ### Minor Changes

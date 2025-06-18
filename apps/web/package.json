@@ -27,7 +27,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@anggiedimasta/ui": "^2.1.0",
+    "@anggiedimasta/ui": "^2.1.1",
     "@nuxtjs/tailwindcss": "7.0.0-beta.0",
     "nuxt": "^3.12.0",
     "tailwindcss": "^4.1.8"
