@@ -110,10 +110,10 @@
         "../assets/css/main"
       ],
       "#tailwindcss/sources": [
-        "./tailwindcss/sources.css"
+        "./tailwindcss/sources"
       ],
       "#app-manifest": [
-        "./manifest/meta/e640df77-d4e7-4495-8ed9-d17b15cb2e59.json"
+        "./manifest/meta/bbac632d-3698-4554-a9ab-6c56a9c5aa87"
       ],
       "#components": [
         "./components"
