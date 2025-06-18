@@ -36,14 +36,12 @@ jobs:
       - name: Debug npm config
         if: startsWith(github.ref, 'refs/tags/')
         run: |
-          echo "NPM_TOKEN length: ${#NPM_TOKEN}"
+          echo "NODE_AUTH_TOKEN length: ${#NODE_AUTH_TOKEN}"
           npm config list
 
-      - name: Login to npm
+      - name: Test npm auth
         if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          npm whoami
+        run: npm whoami
 
       - name: Publish @anggiedimasta/config
         if: startsWith(github.ref, 'refs/tags/')
