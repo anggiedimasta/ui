@@ -35,19 +35,22 @@ jobs:
 
       - name: Login to npm
         if: startsWith(github.ref, 'refs/tags/')
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          echo "@anggiedimasta:registry=https://registry.npmjs.org/" >> ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
 
       - name: Publish @anggiedimasta/config
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           cd packages/config
-          pnpm publish --no-git-checks --access public
+          npm publish --access public
 
       - name: Publish @anggiedimasta/ui
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           cd packages/ui
-          pnpm publish --no-git-checks --access public
+          npm publish --access public
 
   deploy-web:
     runs-on: ubuntu-latest
