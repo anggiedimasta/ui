@@ -33,12 +33,17 @@ jobs:
       - name: Build packages
         run: pnpm build
 
+      - name: Debug npm config
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          echo "NPM_TOKEN length: ${#NPM_TOKEN}"
+          npm config list
+
       - name: Login to npm
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          echo "@anggiedimasta:registry=https://registry.npmjs.org/" >> ~/.npmrc
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+          npm whoami
 
       - name: Publish @anggiedimasta/config
         if: startsWith(github.ref, 'refs/tags/')
