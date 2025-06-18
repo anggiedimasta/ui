@@ -4,11 +4,6 @@
   "outputDirectory": ".output/public",
   "installCommand": "cd ../.. && pnpm install",
   "devCommand": "pnpm dev",
-  "functions": {
-    "app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",
