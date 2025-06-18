@@ -76,9 +76,32 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-publish
     environment: PRODUCTION
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8.15.4
+
+      - name: Clean pnpm lockfile & store
+        run: |
+          rm -rf node_modules pnpm-lock.yaml
+          pnpm install --prefer-offline=false --frozen-lockfile
+
+      - name: Build Nuxt app
+        run: pnpm build
+        working-directory: ./apps/web
+
+      - name: Debug .output folder
+        run: ls -la ./apps/web/.output || echo ".output not found"
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
