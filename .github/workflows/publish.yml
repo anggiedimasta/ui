@@ -91,10 +91,10 @@ jobs:
         with:
           version: 8.15.4
 
-      - name: Clean pnpm lockfile & store
+      - name: Clean install using registry
         run: |
-          rm -rf node_modules pnpm-lock.yaml
-          pnpm install --prefer-offline=false --frozen-lockfile
+          rm -rf node_modules
+          pnpm install --prefer-offline=false --no-frozen-lockfile
 
       - name: Build Nuxt app
         run: pnpm build
