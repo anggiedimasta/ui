@@ -21,10 +21,10 @@
     "ui-components"
   ],
   "scripts": {
-    "build": "npx nuxt build",
-    "dev": "npx nuxt dev",
-    "generate": "npx nuxt generate",
-    "preview": "npx nuxt preview"
+    "build": "./node_modules/.bin/nuxt build",
+    "dev": "./node_modules/.bin/nuxt dev",
+    "generate": "./node_modules/.bin/nuxt generate",
+    "preview": "./node_modules/.bin/nuxt preview"
   },
   "dependencies": {
     "@anggiedimasta/ui": "^2.0.0",
