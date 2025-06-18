@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    '@anggiedimasta/ui/styles.css',
+    'node_modules/@anggiedimasta/ui/dist/styles.css',
     '~/assets/css/main.css'
   ],
   modules: ['@nuxtjs/tailwindcss'],
