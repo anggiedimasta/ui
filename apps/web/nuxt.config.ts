@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: [
+    '@anggiedimasta/ui/styles.css',
+    '~/assets/css/main.css'
+  ],
   modules: ['@nuxtjs/tailwindcss'],
   build: {
     transpile: ['@anggiedimasta/ui']
@@ -13,5 +16,5 @@ export default defineNuxtConfig({
         { name: 'description', content: 'A modern Vue 3 UI component library built with TypeScript and Tailwind CSS' }
       ]
     }
-  }
+  },
 })

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@anggiedimasta/ui/styles.css";
 
 /* Custom cyberpunk styles for the web app layout only */
 @layer base {

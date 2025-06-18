@@ -96,6 +96,10 @@ jobs:
           rm -rf node_modules
           pnpm install --prefer-offline=false --no-frozen-lockfile
 
+      - name: Show installed @anggiedimasta/ui version
+        run: |
+          pnpm list @anggiedimasta/ui
+
       - name: Build Nuxt app
         run: pnpm build
         working-directory: ./apps/web
