@@ -1,7 +1,7 @@
 {
   "name": "@anggiedimasta/ui",
   "description": "A modern, accessible Vue 3 UI component library with comprehensive documentation, testing, and design system built with Tailwind CSS",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "type": "module",
   "author": "anggiedimasta",
   "license": "MIT",

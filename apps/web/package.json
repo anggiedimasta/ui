@@ -1,7 +1,8 @@
 {
   "name": "@anggiedimasta/ui-web",
   "description": "Demo web application showcasing the @anggiedimasta/ui component library with Nuxt 3",
-  "version": "0.2.0",
+  "version": "1.0.0",
+  "private": true,
   "author": "anggiedimasta",
   "license": "MIT",
   "repository": {
