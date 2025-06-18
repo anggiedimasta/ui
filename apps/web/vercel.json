@@ -1,13 +1,5 @@
 {
-  "framework": "nuxtjs",
-  "buildCommand": "npm run build",
-  "outputDirectory": ".output/public",
-  "installCommand": "npm install",
-  "devCommand": "npm run dev",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "outputDirectory": ".output"
 }
