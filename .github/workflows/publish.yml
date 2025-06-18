@@ -77,30 +77,6 @@ jobs:
     needs: build-and-publish
     environment: PRODUCTION
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 8.15.4
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build packages
-        run: pnpm build
-
-      - name: Build web app
-        run: |
-          cd apps/web
-          pnpm build
-
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
