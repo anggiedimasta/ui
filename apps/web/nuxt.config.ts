@@ -5,9 +5,6 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
   modules: ['@nuxtjs/tailwindcss'],
-  build: {
-    transpile: ['@anggiedimasta/ui']
-  },
   app: {
     head: {
       title: '@anggiedimasta/ui - Vue 3 UI Component Library',
