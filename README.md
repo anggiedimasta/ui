@@ -40,8 +40,7 @@ pnpm storybook
 
 ## 📚 Documentation
 
-- [Storybook](https://ui.anggiedimasta.com) - Interactive component documentation
-- [Demo App](https://ui.anggiedimasta.com) - Live demo application
+- [Demo App](https://anggiedimasta-ui.vercel.app) - Live demo application
 
 ## 🚀 Deployment & Publishing
 
@@ -68,15 +67,6 @@ pnpm publish
 cd apps/web
 vercel --prod
 ```
-
-### Required Secrets
-
-Set these GitHub repository secrets:
-
-- `NPM_TOKEN` - NPM authentication token
-- `VERCEL_TOKEN` - Vercel authentication token
-- `VERCEL_ORG_ID` - Vercel organization ID
-- `VERCEL_PROJECT_ID` - Vercel project ID
 
 ## 📄 License
 
