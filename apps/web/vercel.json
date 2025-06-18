@@ -1,8 +1,8 @@
 {
   "framework": "nuxtjs",
-  "buildCommand": "pnpm build",
+  "buildCommand": "cd ../.. && pnpm install && pnpm build && cd apps/web && pnpm build",
   "outputDirectory": ".output/public",
-  "installCommand": "pnpm install",
+  "installCommand": "cd ../.. && pnpm install",
   "devCommand": "pnpm dev",
   "functions": {
     "app/api/**/*.ts": {
