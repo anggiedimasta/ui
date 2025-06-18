@@ -2,11 +2,19 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
+    '@anggiedimasta/ui/styles.css',
     '~/assets/css/main.css'
   ],
   modules: ['@nuxtjs/tailwindcss'],
   build: {
     transpile: ['@anggiedimasta/ui']
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        external: ['@anggiedimasta/ui/styles.css']
+      }
+    }
   },
   app: {
     head: {
