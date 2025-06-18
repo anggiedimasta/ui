@@ -11,12 +11,12 @@
           Create beautiful, accessible, and performant web applications with ease.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <Button variant="default" size="lg" class="px-8 py-3 text-lg font-semibold">
+          <button class="px-8 py-3 text-lg font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
             Get Started
-          </Button>
-          <Button variant="secondary" size="lg" class="px-8 py-3 text-lg font-semibold">
+          </button>
+          <button class="px-8 py-3 text-lg font-semibold bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors">
             View Components
-          </Button>
+          </button>
         </div>
       </div>
     </section>
@@ -103,9 +103,9 @@
             to="/components"
             class="inline-block"
           >
-            <Button variant="default" size="lg" class="px-8 py-3 text-lg font-semibold">
+            <button class="px-8 py-3 text-lg font-semibold bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
               Explore Components
-            </Button>
+            </button>
           </NuxtLink>
           <a
             href="https://github.com/anggiedimasta/ui"
@@ -113,9 +113,9 @@
             rel="noopener noreferrer"
             class="inline-block"
           >
-            <Button variant="secondary" size="lg" class="px-8 py-3 text-lg font-semibold">
+            <button class="px-8 py-3 text-lg font-semibold bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors">
               View on GitHub
-            </Button>
+            </button>
           </a>
         </div>
       </div>
@@ -124,8 +124,6 @@
 </template>
 
 <script setup>
-import { Button } from '@anggiedimasta/ui'
-
 // Set page metadata
 useHead({
   title: '@anggiedimasta/ui - Vue 3 UI Component Library',

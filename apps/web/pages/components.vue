@@ -1,103 +1,87 @@
 <template>
   <div class="space-y-12">
-    <!-- Header -->
+    <!-- Header Section -->
     <section class="text-center py-16">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold text-foreground mb-6">Components</h1>
-        <p class="text-xl text-muted-foreground">
-          Explore and test our Vue 3 UI components
+        <h1 class="text-5xl font-bold text-foreground mb-6">
+          UI Components
+        </h1>
+        <p class="text-xl text-muted-foreground mb-8 leading-relaxed">
+          Explore and test our Vue 3 UI components. Each component is built with accessibility,
+          performance, and customization in mind.
         </p>
       </div>
     </section>
 
-    <!-- Button Component Section -->
+    <!-- Components Section -->
     <section class="py-16">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-foreground mb-12 text-center">Button Component</h2>
-
-        <div class="space-y-12">
-          <!-- Basic Usage -->
-          <div class="cyber-card p-8">
-            <h3 class="text-xl font-semibold text-foreground mb-6">Basic Usage</h3>
-            <div class="code-block mb-6">
-              <code>
-                &lt;Button&gt;Default Button&lt;/Button&gt;
-              </code>
-            </div>
-            <div class="flex flex-wrap gap-4">
-              <Button>Default Button</Button>
-              <Button variant="default">Default Variant</Button>
-            </div>
+        <!-- Button Component -->
+        <div class="space-y-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Button Component</h2>
+            <p class="text-lg text-muted-foreground">
+              Versatile button component with multiple variants, sizes, and states.
+            </p>
           </div>
 
-          <!-- All Button Variants -->
+          <!-- Button Variants -->
           <div class="cyber-card p-8">
-            <h3 class="text-xl font-semibold text-foreground mb-6">All Button Variants</h3>
+            <h3 class="text-xl font-semibold text-foreground mb-6">Button Variants</h3>
             <div class="code-block mb-6">
               <code>
                 &lt;Button variant="default"&gt;Default&lt;/Button&gt;<br>
+                &lt;Button variant="secondary"&gt;Secondary&lt;/Button&gt;<br>
                 &lt;Button variant="destructive"&gt;Destructive&lt;/Button&gt;<br>
                 &lt;Button variant="outline"&gt;Outline&lt;/Button&gt;<br>
-                &lt;Button variant="secondary"&gt;Secondary&lt;/Button&gt;<br>
                 &lt;Button variant="ghost"&gt;Ghost&lt;/Button&gt;<br>
                 &lt;Button variant="link"&gt;Link&lt;/Button&gt;
               </code>
             </div>
-            <div class="flex flex-wrap gap-4">
-              <Button variant="default">Default</Button>
-              <Button variant="destructive">Destructive</Button>
-              <Button variant="outline">Outline</Button>
-              <Button variant="secondary">Secondary</Button>
-              <Button variant="ghost">Ghost</Button>
-              <Button variant="link">Link</Button>
-            </div>
-          </div>
-
-          <!-- All Button Sizes -->
-          <div class="cyber-card p-8">
-            <h3 class="text-xl font-semibold text-foreground mb-6">All Button Sizes</h3>
-            <div class="code-block mb-6">
-              <code>
-                &lt;Button size="default"&gt;Default&lt;/Button&gt;<br>
-                &lt;Button size="sm"&gt;Small&lt;/Button&gt;<br>
-                &lt;Button size="lg"&gt;Large&lt;/Button&gt;<br>
-                &lt;Button size="icon"&gt;🔍&lt;/Button&gt;
-              </code>
-            </div>
             <div class="flex flex-wrap items-center gap-4">
-              <Button size="default">Default</Button>
-              <Button size="sm">Small</Button>
-              <Button size="lg">Large</Button>
-              <Button size="icon">🔍</Button>
+              <button class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Default</button>
+              <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">Secondary</button>
+              <button class="px-4 py-2 bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">Destructive</button>
+              <button class="px-4 py-2 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Outline</button>
+              <button class="px-4 py-2 bg-transparent text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Ghost</button>
+              <button class="px-4 py-2 bg-transparent text-primary underline-offset-4 hover:underline transition-colors">Link</button>
             </div>
           </div>
 
-          <!-- Variants with Different Sizes -->
+          <!-- Button Sizes -->
           <div class="cyber-card p-8">
-            <h3 class="text-xl font-semibold text-foreground mb-6">Variants with Different Sizes</h3>
+            <h3 class="text-xl font-semibold text-foreground mb-6">Button Sizes</h3>
             <div class="space-y-6">
               <div>
                 <h4 class="text-lg font-medium text-foreground mb-3">Default Variant</h4>
                 <div class="flex flex-wrap items-center gap-4">
-                  <Button variant="default" size="sm">Small</Button>
-                  <Button variant="default" size="default">Default</Button>
-                  <Button variant="default" size="lg">Large</Button>
+                  <button class="px-3 py-1.5 text-sm bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Small</button>
+                  <button class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Default</button>
+                  <button class="px-8 py-3 text-lg bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Large</button>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-lg font-medium text-foreground mb-3">Secondary Variant</h4>
+                <div class="flex flex-wrap items-center gap-4">
+                  <button class="px-3 py-1.5 text-sm bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">Small</button>
+                  <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">Default</button>
+                  <button class="px-8 py-3 text-lg bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">Large</button>
                 </div>
               </div>
               <div>
                 <h4 class="text-lg font-medium text-foreground mb-3">Destructive Variant</h4>
                 <div class="flex flex-wrap items-center gap-4">
-                  <Button variant="destructive" size="sm">Small</Button>
-                  <Button variant="destructive" size="default">Default</Button>
-                  <Button variant="destructive" size="lg">Large</Button>
+                  <button class="px-3 py-1.5 text-sm bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">Small</button>
+                  <button class="px-4 py-2 bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">Default</button>
+                  <button class="px-8 py-3 text-lg bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">Large</button>
                 </div>
               </div>
               <div>
                 <h4 class="text-lg font-medium text-foreground mb-3">Outline Variant</h4>
                 <div class="flex flex-wrap items-center gap-4">
-                  <Button variant="outline" size="sm">Small</Button>
-                  <Button variant="outline" size="default">Default</Button>
-                  <Button variant="outline" size="lg">Large</Button>
+                  <button class="px-3 py-1.5 text-sm border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Small</button>
+                  <button class="px-4 py-2 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Default</button>
+                  <button class="px-8 py-3 text-lg border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Large</button>
                 </div>
               </div>
             </div>
@@ -114,11 +98,11 @@
               </code>
             </div>
             <div class="flex flex-wrap gap-4">
-              <Button size="icon">🔍</Button>
-              <Button variant="outline" size="icon">➕</Button>
-              <Button variant="secondary" size="icon">📝</Button>
-              <Button variant="destructive" size="icon">🗑️</Button>
-              <Button variant="ghost" size="icon">⚙️</Button>
+              <button class="w-10 h-10 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">🔍</button>
+              <button class="w-10 h-10 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">➕</button>
+              <button class="w-10 h-10 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">📝</button>
+              <button class="w-10 h-10 bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">🗑️</button>
+              <button class="w-10 h-10 bg-transparent text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">⚙️</button>
             </div>
           </div>
 
@@ -132,12 +116,12 @@
               </code>
             </div>
             <div class="flex flex-wrap gap-4">
-              <Button disabled>Disabled</Button>
-              <Button variant="destructive" disabled>Disabled Destructive</Button>
-              <Button variant="outline" disabled>Disabled Outline</Button>
-              <Button variant="secondary" disabled>Disabled Secondary</Button>
-              <Button variant="ghost" disabled>Disabled Ghost</Button>
-              <Button variant="link" disabled>Disabled Link</Button>
+              <button class="px-4 py-2 bg-primary text-primary-foreground rounded-md opacity-50 cursor-not-allowed" disabled>Disabled</button>
+              <button class="px-4 py-2 bg-destructive text-destructive-foreground rounded-md opacity-50 cursor-not-allowed" disabled>Disabled Destructive</button>
+              <button class="px-4 py-2 border border-border bg-background text-foreground rounded-md opacity-50 cursor-not-allowed" disabled>Disabled Outline</button>
+              <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded-md opacity-50 cursor-not-allowed" disabled>Disabled Secondary</button>
+              <button class="px-4 py-2 bg-transparent text-foreground rounded-md opacity-50 cursor-not-allowed" disabled>Disabled Ghost</button>
+              <button class="px-4 py-2 bg-transparent text-primary underline-offset-4 opacity-50 cursor-not-allowed" disabled>Disabled Link</button>
             </div>
           </div>
 
@@ -151,12 +135,12 @@
               </code>
             </div>
             <div class="flex flex-wrap gap-4 items-center">
-              <Button
+              <button
                 @click="incrementCount"
-                variant="default"
+                class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
               >
                 {{ isLoading ? 'Loading...' : 'Click me!' }}
-              </Button>
+              </button>
               <span class="text-muted-foreground">Count: {{ clickCount }}</span>
             </div>
           </div>
@@ -171,8 +155,8 @@
               </code>
             </div>
             <div class="space-y-4">
-              <Button variant="default" size="lg" class="w-full">Full Width Button</Button>
-              <Button variant="outline" class="w-full sm:w-auto">Responsive Button</Button>
+              <button class="w-full px-8 py-3 text-lg bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">Full Width Button</button>
+              <button class="w-full sm:w-auto px-4 py-2 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Responsive Button</button>
             </div>
           </div>
 
@@ -186,9 +170,9 @@
               </code>
             </div>
             <div class="flex flex-wrap gap-4">
-              <Button as="a" href="#" variant="default">Link Button</Button>
-              <Button as="button" type="submit" variant="secondary">Submit Button</Button>
-              <Button as="button" type="reset" variant="outline">Reset Button</Button>
+              <a href="#" class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Link Button</a>
+              <button type="submit" class="px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">Submit Button</button>
+              <button type="reset" class="px-4 py-2 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Reset Button</button>
             </div>
           </div>
 
@@ -199,26 +183,26 @@
               <div>
                 <h4 class="text-lg font-medium text-foreground mb-3">Form Actions</h4>
                 <div class="flex flex-wrap gap-4">
-                  <Button variant="default" size="lg">Save Changes</Button>
-                  <Button variant="outline">Cancel</Button>
-                  <Button variant="destructive" size="sm">Delete</Button>
+                  <button class="px-8 py-3 text-lg bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">Save Changes</button>
+                  <button class="px-4 py-2 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Cancel</button>
+                  <button class="px-3 py-1.5 text-sm bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">Delete</button>
                 </div>
               </div>
               <div>
                 <h4 class="text-lg font-medium text-foreground mb-3">Navigation</h4>
                 <div class="flex flex-wrap gap-4">
-                  <Button variant="ghost">Back</Button>
-                  <Button variant="default">Next</Button>
-                  <Button variant="link">Skip</Button>
+                  <button class="px-4 py-2 bg-transparent text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">Back</button>
+                  <button class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Next</button>
+                  <button class="px-4 py-2 bg-transparent text-primary underline-offset-4 hover:underline transition-colors">Skip</button>
                 </div>
               </div>
               <div>
                 <h4 class="text-lg font-medium text-foreground mb-3">Data Actions</h4>
                 <div class="flex flex-wrap gap-4">
-                  <Button variant="outline" size="icon">➕</Button>
-                  <Button variant="secondary" size="icon">📝</Button>
-                  <Button variant="destructive" size="icon">🗑️</Button>
-                  <Button variant="ghost" size="icon">🔍</Button>
+                  <button class="w-10 h-10 border border-border bg-background text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">➕</button>
+                  <button class="w-10 h-10 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors">📝</button>
+                  <button class="w-10 h-10 bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90 transition-colors">🗑️</button>
+                  <button class="w-10 h-10 bg-transparent text-foreground rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">🔍</button>
                 </div>
               </div>
             </div>
@@ -265,8 +249,6 @@
 </template>
 
 <script setup>
-import { Button } from '@anggiedimasta/ui'
-
 // Reactive state for interactive example
 const clickCount = ref(0)
 const isLoading = ref(false)
