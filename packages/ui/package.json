@@ -5,6 +5,10 @@
   "type": "module",
   "author": "anggiedimasta",
   "license": "MIT",
+  "access": "public",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/anggiedimasta/ui.git"
