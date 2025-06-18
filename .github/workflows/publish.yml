@@ -91,10 +91,11 @@ jobs:
         with:
           version: 8.15.4
 
-      - name: Clean install using registry
-        run: |
-          rm -rf node_modules
-          pnpm install --prefer-offline=false --no-frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
 
       - name: Show installed @anggiedimasta/ui version
         run: |
