@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": {
+      "source": "apps/web",
+      "buildCommand": "pnpm build",
+      "installCommand": "pnpm install --frozen-lockfile",
+      "outputDirectory": ".output"
+    }
+  }
+}
